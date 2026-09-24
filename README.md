@@ -10,8 +10,10 @@ Processes the DFA-α1 using RR interval data:
 4. **`dfa.py`** — core DFA-α1 calculation, 4 ≤ n ≤ 16 beat window (Peng et al. 1995).
 5. **`windowing.py`** — time-varying analysis: 2-minute rolling window, 5-second
    grid step, HR computed from the un-detrended corrected series.
-6. **`main.py`** — compiles all the above steps together to generate the csv with DFA-α1 for every 5 seconds along with a plot.
-7. **`dfa_alpha1_pipeline.ipynb`** - **imports and calls** the functions in the `.py` files sitting in this same folder (`data_io.py`, `artifact_correction.py`,
+
+   Primary files to work with: (either directly through main.py or using Jupyter notebook - dfa_alpha1_pipeline.ipynb) 
+7. **`main.py`** — calls and compiles all the above steps together to generate the csv with DFA-α1 for every 5 seconds along with a plot.
+8. **`dfa_alpha1_pipeline.ipynb`** - **imports and calls** the functions in the `.py` files sitting in this same folder (`data_io.py`, `artifact_correction.py`,
 `detrending.py`, `dfa.py`, `windowing.py`).
 
 **Before running:** make sure this notebook is saved in the same folder as those `.py` files, and that you've run `pip install -r requirements.txt`
